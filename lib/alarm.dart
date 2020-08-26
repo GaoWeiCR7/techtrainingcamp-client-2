@@ -136,7 +136,9 @@ class _NotifyPageState extends State<NotifyPage> with AutomaticKeepAliveClientMi
                 Spacer(),
                 FlatButton(
                     onPressed: (){
-                      _alarm.alarms.remove(Offset(_alarm.alarms[index].dx,_alarm.alarms[index].dy));
+                      double dehour = _alarm.alarms[index].dx;
+                      double deminute = _alarm.alarms[index].dy;
+                      _alarm.alarms.remove(Offset(dehour,deminute));
                       setState(() {
 
                       });
